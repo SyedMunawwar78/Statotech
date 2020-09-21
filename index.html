@@ -34,6 +34,7 @@
 
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="email.js"></script>
     <style>
       .cardBorder:hover {
         background-color: #6161e8;
@@ -932,7 +933,7 @@
             <div class="contact-wrapper-form pt-115  wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.5s">
                 <h4 class="contact-title pb-10"><i class="lni-envelope"></i> Leave <span>A Message.</span></h4>
                 
-                <form id="contact-form" >
+                <div id="contact-form" >
                     <div class="row">
                         <div class="col-md-6">
                             <div class="contact-form mt-45">
@@ -955,11 +956,11 @@
                         <p class="form-message"></p>
                         <div class="col-md-12">
                             <div class="contact-form mt-45">
-                                <button type="submit" id="form-submit" onclick="sendEmail()" class="main-btn">Send Now</button>
+                                <button  id="form-submit" onclick="sendEmail()" class="main-btn">Send Now</button>
                             </div> <!-- contact-form -->
                         </div>
                     </div> <!-- row -->
-                </form>
+                  </div>
             </div> <!-- contact wrapper form -->
         </div>
     </div>
@@ -1071,32 +1072,6 @@
         }
       });
     </script>
-    <script type="text/javascript">
     
-      function sendEmail(e) {
-      e.preventDefault()
-
-      var name=$('#name').val()
-      name="Enquiry from "+name;
-      var email=$('#email').val()
-      name="Enquiry from "+name+"-"+email;
-      var message=$('#message').val()
-      alert(email)
-
-
-      Email.send({
-      Host: "smtpout.secureserver.net",
-      Username : "info@statotechsolutions.com.au",
-      Password : "Discover39",
-      To : 'munawwar736@gmail.com',
-      From : "info@statotechsolutions.com.au",
-      Port : 465 ,
-      Subject :name,
-      Body : message,
-      }).then(
-            message => alert(message)
-      );
-}
-  </script>
   </body>
 </html>
