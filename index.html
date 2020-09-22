@@ -72,6 +72,10 @@
       .carousel-inner .carousel-item-left {
         transform: translateX(0);
       }
+
+      .alert-display{
+        display: none;
+      }
     </style>
         <script src="https://smtpjs.com/v3/smtp.js"></script>  
 
@@ -939,18 +943,22 @@
                             <div class="contact-form mt-45">
                                 <label>Enter Your Name</label>
                                 <input type="text" name="name" id="name" placeholder="Full Name">
+                                <p class="alert alert-danger alert-display name-message">Name is required</p>
                             </div> <!-- contact-form -->
                         </div>
                         <div class="col-md-6">
                             <div class="contact-form mt-45">
                                 <label>Enter Your Email</label>
                                 <input type="email" id="email" name="email" placeholder="Email">
+                                <p class="alert alert-danger alert-display email-message">Email is required</p>
+                                <p class="alert alert-danger alert-display email-perfect">Please enter a proper email</p>
                             </div> <!-- contact-form -->
                         </div>
                         <div class="col-md-12">
                             <div class="contact-form mt-45">
                                 <label>Your Message</label>
                                 <textarea name="message" id="message" placeholder="Enter your message..."></textarea>
+                                <p class="alert alert-danger alert-display area-message">Message is required</p>
                             </div> <!-- contact-form -->
                         </div>
                         <p class="form-message"></p>
@@ -959,6 +967,7 @@
                                 <button  id="form-submit" onclick="sendEmail()" class="main-btn">Send Now</button>
                             </div> <!-- contact-form -->
                         </div>
+                        <p class="alert alert-success alert-display success-message mt-2">Enquiry sent successfully</p>
                     </div> <!-- row -->
                   </div>
             </div> <!-- contact wrapper form -->
